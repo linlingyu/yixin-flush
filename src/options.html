@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>options</title>
+<link rel="stylesheet" href="./css/bootstrap.min.css" />
+<link rel="stylesheet" href="./css/options.css" />
+</head>
+<body>
+<header>
+    <div class="title">
+        <div class="logo"></div><div class="font">自动聊天方式设置</div>
+    </div>
+</header>
+<div id="mainId" class="main" ng-controller="formController">
+    <form name="myform" class="form-horizontal" role="form">
+        <div class="form-group">
+            <label>请从本地选择一个用来自动聊天的源文本</label><br/>
+            <input id="fileId" type="file" />
+            <input type="text" readonly="readonly" ng-model="opts.path"/>&nbsp;
+            <input type="button" value="选择文件" ng-click="opts.onSelectFile();"/>&nbsp;
+            <input type="button" class="btn btn-warning btn-xs" value="显示文本" ng-disabled="opts.showText" ng-click="opts.onShowText();"/>
+            <select ng-model="opts.encoding" ng-change="opts.onChangeFile();"><option value="GBK">GBK</option><option value="utf-8">UTF-8</option></select><br/>
+            <input id="loopId" ng-model="opts.loop" type="checkbox" />&nbsp;<label for="loopId">是否循环</label>
+        </div>
+        <div class="form-group">
+            <label>好友列表</label><br/>
+            <input type="checkbox" ng-model="friend.selectAll" />&nbsp;<label>全选</label>
+            <input type="button" class="btn btn-danger btn-xs" value="删除" ng-click="friend.onRemove();"/>&nbsp;&nbsp;
+            <input id="add-btn" type="button" class="btn btn-warning btn-xs" value="增加" ng-click="friend.onAdd();"/>
+        </div>
+        <div id="friend-list" class="form-group">
+            <div class="item ng-cloak" ng-repeat="name in friend.array track by $index">
+                <input type="checkbox" ng-value="name" ng-checked="friend.selectAll"/>&nbsp;
+                <input type="text" ng-value="name"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-warning" ng-click="friend.onSave();">Save</button>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+<script type="text/javascript" src="./js/requirejs-config.js"></script>
+<script type="text/javascript" src="./js/libs/require.js" data-main="./js/options.js"></script>
+</html>

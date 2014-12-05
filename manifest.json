@@ -1,0 +1,35 @@
+{
+    "name": "yixin",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "yixin hack",
+
+    "browser_action": {
+        "default_icon": "yixin.png",
+        "default_popup": "./src/popup.html"
+    },
+
+    "background" : {
+        "persistent": false,//事件页面
+        // "scripts": ["./src/js/background.js"]
+        "page": "./src/background.html"
+    },
+
+    "permissions": [
+        "tabs"
+        // "http://*.baidu.com/",
+        // "http://*.163.com/"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["https://web.yixin.im/*"],
+            "js": [
+                "./src/js/libs/jquery-2.1.1.js",
+                "./src/js/robot.js"
+            ]
+        }
+    ],
+
+    "icons": {"128": "yixin.png"}
+}

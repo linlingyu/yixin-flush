@@ -1,0 +1,21 @@
+body{background: #eee;}
+header {margin: 20px 0px;}
+header>.title {display: -webkit-box; width: 600px; -webkit-box-pack: center; border: gray solid 1px; border-radius: 5px; margin: 0 auto;}
+header>.title>div {margin: 10px;}
+header>.title>.logo{background: url(../images/yixin.png) no-repeat center center; width: 64px; height: 64px; background-size: 64px;}
+header>.title>.font{line-height: 64px; font-size: 18px; font-weight: bold;}
+#fileId {display: none;}
+.ng-cloak{display: none;}
+.main {width: 600px; padding: 20px 100px; border: gray solid 1px; border-radius: 5px; margin: 0 auto;}
+.form-horizontal {}
+.item {margin: 5px 0px;}
+
+.popup-inner {padding: 10px;}
+.popup-inner .popup-text {margin-top: 30px;}
+/**/
+.c-popup {background: rgba(0, 0, 0, .7); z-index: 100;}
+.c-popup .popup-main {margin: 0px; padding: 0px;}
+.c-popup .popup-content {background: white; margin: 0px 5%; font-size: 18px; line-height: 20px; color: #5e6571;}
+.c-popup .ui-dialog-content {background: white; margin: 0px 10px;}
+.c-popup .result {padding: 10px; color: #5e6571; font-size: 18px; line-height: 40px;}
+.c-popup .popup-close{display: block; background: url(../images/popup-close.png) no-repeat;background-size: 15px auto; width:15px; height:15px; float: right;}

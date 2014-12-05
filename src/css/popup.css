@@ -1,0 +1,7 @@
+* {font-size: 12px;}
+.app-menu {list-style: none; padding: 0px; margin: 0px; width: 150px;}
+.app-menu>li{padding: 3px;}
+.app-menu>.separator{padding: 0px; height: 1px; background: #e5e5e5;}
+.app-menu>li>.item { padding: 3px; display: block; text-decoration: none; border-radius: 3px; outline: none; color: #428bca; cursor: pointer;}
+.app-menu>li>.item:hover {background: #eee; color: black;}
+.app-menu>li>.item:active {background: #eee; color: white;}
