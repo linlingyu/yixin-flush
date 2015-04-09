@@ -1,5 +1,5 @@
 define(function(require, exports, module){
-    //在浏览器输入filesystem:http://domain/persistent/,把persistent换成temporary则是读取临时空间
+    //在浏览器输入filesystem:chrome-extension://domain/persistent/,把persistent换成temporary则是读取临时空间
     var fs;
     window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
     // var resolveLocalFileSystemURL = window.resolveLocalFileSystemURL || window.webkitResolveLocalFileSystemURL;//根据URL取得文件的读取权限
